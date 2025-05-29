@@ -1,0 +1,1038 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Italic;}
+{\colortbl;\red255\green255\blue255;\red53\green250\blue243;\red28\green26\blue40;\red100\green242\blue169;
+\red213\green213\blue213;\red253\green217\blue76;\red173\green173\blue173;\red167\green161\blue162;\red252\green118\blue44;
+\red245\green103\blue95;\red250\green42\blue63;\red252\green97\blue211;\red210\green63\blue6;\red113\green118\blue175;
+\red46\green220\blue248;}
+{\*\expandedcolortbl;;\cssrgb\c21176\c97647\c96471;\cssrgb\c14902\c13725\c20784;\cssrgb\c44706\c94510\c72157;
+\cssrgb\c86667\c86667\c86667;\cssrgb\c99608\c87059\c36471;\cssrgb\c73333\c73333\c73333;\cssrgb\c71373\c69412\c69412;\cssrgb\c100000\c54510\c22353;
+\cssrgb\c97647\c49412\c44706;\cssrgb\c99608\c26667\c31373;\cssrgb\c100000\c49412\c85882;\cssrgb\c86667\c33333\c0;\cssrgb\c51765\c54510\c74118;
+\cssrgb\c18039\c88627\c98039;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!\cf4 \strokec4 DOCTYPE\cf5 \strokec5  
+\f1\i \cf6 \strokec6 html
+\f0\i0 \cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf2 \cb3 \strokec2 <\cf4 \strokec4 html\cf5 \strokec5  
+\f1\i \cf6 \strokec6 lang
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "en"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf2 \cb3 \strokec2 <\cf4 \strokec4 head\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5     \cf2 \strokec2 <\cf4 \strokec4 meta\cf5 \strokec5  
+\f1\i \cf6 \strokec6 charset
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "UTF-8"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5     \cf2 \strokec2 <\cf4 \strokec4 meta\cf5 \strokec5  
+\f1\i \cf6 \strokec6 name
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "viewport"\cf5 \strokec5  
+\f1\i \cf6 \strokec6 content
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "width=device-width, initial-scale=1.0"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5     \cf2 \strokec2 <\cf4 \strokec4 title\cf2 \strokec2 >\cf5 \strokec5 MindBridge AI - Prototype & Story\cf2 \strokec2 </\cf4 \strokec4 title\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5     \cf2 \strokec2 <\cf4 \strokec4 script\cf5 \strokec5  
+\f1\i \cf6 \strokec6 src
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"\cf2 \strokec2 ></\cf4 \strokec4 script\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5     \cf2 \strokec2 <\cf4 \strokec4 style\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf4 \strokec4 *\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 0\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 0\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 box-sizing\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 border-box\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf4 \strokec4 body\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 font-family\cf8 \strokec8 :\cf5 \strokec5  \cf9 \strokec9 'Inter'\cf5 \strokec5 , \cf11 \strokec11 -apple-system\cf5 \strokec5 , \cf11 \strokec11 BlinkMacSystemFont\cf5 \strokec5 , \cf10 \strokec10 sans-serif\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 line-height\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 1.6\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 color\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 #1f2937\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 background\cf8 \strokec8 :\cf5 \strokec5  \cf2 \strokec2 linear-gradient\cf5 \strokec5 (\cf10 \strokec10 135deg\cf5 \strokec5 , \cf10 \strokec10 #f9fafb\cf5 \strokec5  \cf10 \strokec10 0%\cf5 \strokec5 , \cf10 \strokec10 #e5f3f2\cf5 \strokec5  \cf10 \strokec10 100%\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .container\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 max-width\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 1200px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 0\cf5 \strokec5  \cf11 \strokec11 auto\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 20px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .hero\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 text-align\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 center\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 60px\cf5 \strokec5  \cf10 \strokec10 20px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 background\cf8 \strokec8 :\cf5 \strokec5  \cf2 \strokec2 linear-gradient\cf5 \strokec5 (\cf10 \strokec10 135deg\cf5 \strokec5 , \cf10 \strokec10 #1e3a8a\cf5 \strokec5  \cf10 \strokec10 0%\cf5 \strokec5 , \cf10 \strokec10 #14b8a6\cf5 \strokec5  \cf10 \strokec10 100%\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 color\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 white\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-radius\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 20px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin-bottom\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 40px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .hero\cf5 \strokec5  \cf4 \strokec4 h1\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 font-size\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 3rem\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin-bottom\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 20px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 font-weight\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 700\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .hero\cf5 \strokec5  \cf4 \strokec4 p\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 font-size\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 1.2rem\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 opacity\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 0.9\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 max-width\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 600px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 0\cf5 \strokec5  \cf11 \strokec11 auto\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .section\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 background\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 white\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-radius\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 15px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 40px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin-bottom\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 30px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 box-shadow\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 0\cf5 \strokec5  \cf10 \strokec10 4px\cf5 \strokec5  \cf10 \strokec10 6px\cf5 \strokec5  \cf11 \strokec11 rgba\cf5 \strokec5 (\cf10 \strokec10 0\cf5 \strokec5 , \cf10 \strokec10 0\cf5 \strokec5 , \cf10 \strokec10 0\cf5 \strokec5 , \cf10 \strokec10 0.05\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .section\cf5 \strokec5  \cf4 \strokec4 h2\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 color\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 #1e3a8a\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin-bottom\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 25px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 font-size\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 2rem\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-bottom\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 3px\cf5 \strokec5  \cf11 \strokec11 solid\cf5 \strokec5  \cf10 \strokec10 #14b8a6\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding-bottom\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 10px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .prototype-container\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 display\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 grid\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 grid-template-columns\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 1fr\cf5 \strokec5  \cf10 \strokec10 1fr\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 gap\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 30px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin-top\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 30px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .chat-interface\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 2px\cf5 \strokec5  \cf11 \strokec11 solid\cf5 \strokec5  \cf10 \strokec10 #e5e7eb\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-radius\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 15px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 height\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 500px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 overflow-y\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 auto\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 background\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 #f9fafb\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .chat-header\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 background\cf8 \strokec8 :\cf5 \strokec5  \cf2 \strokec2 linear-gradient\cf5 \strokec5 (\cf10 \strokec10 135deg\cf5 \strokec5 , \cf10 \strokec10 #1e3a8a\cf5 \strokec5 , \cf10 \strokec10 #14b8a6\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 color\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 white\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 15px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 text-align\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 center\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 font-weight\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 600\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .chat-messages\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 20px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 height\cf8 \strokec8 :\cf5 \strokec5  \cf2 \strokec2 calc\cf5 \strokec5 (\cf10 \strokec10 100%\cf5 \strokec5  \cf6 \strokec6 -\cf5 \strokec5  \cf10 \strokec10 120px\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 overflow-y\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 auto\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .message\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin-bottom\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 15px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 max-width\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 80%\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 12px\cf5 \strokec5  \cf10 \strokec10 16px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-radius\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 18px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 animation\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 fadeIn\cf5 \strokec5  \cf10 \strokec10 0.5s\cf5 \strokec5  \cf11 \strokec11 ease-in\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .user-message\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 background\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 #1e3a8a\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 color\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 white\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin-left\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 auto\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-bottom-right-radius\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 5px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .ai-message\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 background\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 #14b8a6\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 color\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 white\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-bottom-left-radius\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 5px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .typing-indicator\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 background\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 #e5e7eb\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 color\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 #6b7280\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 8px\cf5 \strokec5  \cf10 \strokec10 16px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-radius\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 18px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 max-width\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 80px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 text-align\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 center\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 animation\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 pulse\cf5 \strokec5  \cf10 \strokec10 1.5s\cf5 \strokec5  \cf11 \strokec11 infinite\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 @keyframes\cf5 \strokec5  
+\f1\i \cf12 \strokec12 fadeIn
+\f0\i0 \cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             from \{ \cf4 \strokec4 opacity\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 0\cf5 \strokec5 ; \cf4 \strokec4 transform\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 translateY\cf5 \strokec5 (\cf10 \strokec10 10px\cf5 \strokec5 ); \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             to \{ \cf4 \strokec4 opacity\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 1\cf5 \strokec5 ; \cf4 \strokec4 transform\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 translateY\cf5 \strokec5 (\cf10 \strokec10 0\cf5 \strokec5 ); \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 @keyframes\cf5 \strokec5  
+\f1\i \cf12 \strokec12 pulse
+\f0\i0 \cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             0%, 100% \{ \cf4 \strokec4 opacity\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 1\cf5 \strokec5 ; \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             50% \{ \cf4 \strokec4 opacity\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 0.5\cf5 \strokec5 ; \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .chat-input\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-top\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 1px\cf5 \strokec5  \cf11 \strokec11 solid\cf5 \strokec5  \cf10 \strokec10 #e5e7eb\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 15px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 display\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 flex\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 gap\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 10px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .chat-input\cf5 \strokec5  \cf4 \strokec4 input\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 flex\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 1\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 10px\cf5 \strokec5  \cf10 \strokec10 15px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 1px\cf5 \strokec5  \cf11 \strokec11 solid\cf5 \strokec5  \cf10 \strokec10 #d1d5db\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-radius\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 25px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 outline\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 none\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 font-size\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 14px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .chat-input\cf5 \strokec5  \cf4 \strokec4 button\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 background\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 #14b8a6\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 color\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 white\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 none\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 10px\cf5 \strokec5  \cf10 \strokec10 20px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-radius\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 25px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 cursor\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 pointer\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 font-weight\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 600\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .features-grid\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 display\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 grid\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 grid-template-columns\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 repeat\cf5 \strokec5 (\cf11 \strokec11 auto-fit\cf5 \strokec5 , \cf11 \strokec11 minmax\cf5 \strokec5 (\cf10 \strokec10 250px\cf5 \strokec5 , \cf10 \strokec10 1fr\cf5 \strokec5 ));\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 gap\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 20px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin-top\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 30px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .feature-card\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 background\cf8 \strokec8 :\cf5 \strokec5  \cf2 \strokec2 linear-gradient\cf5 \strokec5 (\cf10 \strokec10 135deg\cf5 \strokec5 , \cf10 \strokec10 #f0f9ff\cf5 \strokec5  \cf10 \strokec10 0%\cf5 \strokec5 , \cf10 \strokec10 #e0f2fe\cf5 \strokec5  \cf10 \strokec10 100%\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 25px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-radius\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 12px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-left\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 4px\cf5 \strokec5  \cf11 \strokec11 solid\cf5 \strokec5  \cf10 \strokec10 #14b8a6\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .feature-card\cf5 \strokec5  \cf4 \strokec4 h3\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 color\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 #1e3a8a\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin-bottom\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 10px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 font-size\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 1.2rem\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .stats-grid\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 display\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 grid\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 grid-template-columns\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 repeat\cf5 \strokec5 (\cf11 \strokec11 auto-fit\cf5 \strokec5 , \cf11 \strokec11 minmax\cf5 \strokec5 (\cf10 \strokec10 200px\cf5 \strokec5 , \cf10 \strokec10 1fr\cf5 \strokec5 ));\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 gap\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 20px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 30px\cf5 \strokec5  \cf10 \strokec10 0\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .stat-card\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 background\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 white\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 30px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-radius\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 12px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 text-align\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 center\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 2px\cf5 \strokec5  \cf11 \strokec11 solid\cf5 \strokec5  \cf10 \strokec10 #e5f3f2\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 transition\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 transform\cf5 \strokec5  \cf10 \strokec10 0.3s\cf5 \strokec5  \cf11 \strokec11 ease\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .stat-card\cf13 \strokec13 :hover\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 transform\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 translateY\cf5 \strokec5 (\cf10 \strokec10 -5px\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .stat-number\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 font-size\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 2.5rem\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 font-weight\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 bold\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 color\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 #1e3a8a\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin-bottom\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 10px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .stat-label\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 color\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 #6b7280\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 font-size\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 0.9rem\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .chart-container\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 30px\cf5 \strokec5  \cf10 \strokec10 0\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 20px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 background\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 white\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-radius\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 12px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 box-shadow\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 0\cf5 \strokec5  \cf10 \strokec10 2px\cf5 \strokec5  \cf10 \strokec10 4px\cf5 \strokec5  \cf11 \strokec11 rgba\cf5 \strokec5 (\cf10 \strokec10 0\cf5 \strokec5 , \cf10 \strokec10 0\cf5 \strokec5 , \cf10 \strokec10 0\cf5 \strokec5 , \cf10 \strokec10 0.05\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .user-journey\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 background\cf8 \strokec8 :\cf5 \strokec5  \cf2 \strokec2 linear-gradient\cf5 \strokec5 (\cf10 \strokec10 135deg\cf5 \strokec5 , \cf10 \strokec10 #fef3c7\cf5 \strokec5  \cf10 \strokec10 0%\cf5 \strokec5 , \cf10 \strokec10 #fde68a\cf5 \strokec5  \cf10 \strokec10 100%\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 30px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-radius\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 15px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 30px\cf5 \strokec5  \cf10 \strokec10 0\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .journey-step\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 display\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 flex\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 align-items\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 center\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin-bottom\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 20px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 15px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 background\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 rgba\cf5 \strokec5 (\cf10 \strokec10 255\cf5 \strokec5 , \cf10 \strokec10 255\cf5 \strokec5 , \cf10 \strokec10 255\cf5 \strokec5 , \cf10 \strokec10 0.7\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-radius\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 10px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .step-number\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 background\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 #1e3a8a\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 color\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 white\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 width\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 30px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 height\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 30px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-radius\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 50%\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 display\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 flex\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 align-items\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 center\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 justify-content\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 center\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin-right\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 15px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 font-weight\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 bold\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .demo-button\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 background\cf8 \strokec8 :\cf5 \strokec5  \cf2 \strokec2 linear-gradient\cf5 \strokec5 (\cf10 \strokec10 135deg\cf5 \strokec5 , \cf10 \strokec10 #1e3a8a\cf5 \strokec5 , \cf10 \strokec10 #14b8a6\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 color\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 white\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 none\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 15px\cf5 \strokec5  \cf10 \strokec10 30px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 border-radius\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 25px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 cursor\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 pointer\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 font-size\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 16px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 font-weight\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 600\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 margin\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 10px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 transition\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 transform\cf5 \strokec5  \cf10 \strokec10 0.3s\cf5 \strokec5  \cf11 \strokec11 ease\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 .demo-button\cf13 \strokec13 :hover\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf4 \strokec4 transform\cf8 \strokec8 :\cf5 \strokec5  \cf11 \strokec11 translateY\cf5 \strokec5 (\cf10 \strokec10 -2px\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 @media\cf5 \strokec5  (\cf12 \strokec12 max-width\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 768px\cf5 \strokec5 ) \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf6 \strokec6 .prototype-container\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf4 \strokec4 grid-template-columns\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 1fr\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf6 \strokec6 .hero\cf5 \strokec5  \cf4 \strokec4 h1\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf4 \strokec4 font-size\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 2rem\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf6 \strokec6 .section\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf4 \strokec4 padding\cf8 \strokec8 :\cf5 \strokec5  \cf10 \strokec10 20px\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5     \cf2 \strokec2 </\cf4 \strokec4 style\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 </\cf4 \strokec4 head\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf2 \cb3 \strokec2 <\cf4 \strokec4 body\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "container"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "hero"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 h1\cf2 \strokec2 >\cf5 \strokec5 MindBridge AI\cf2 \strokec2 </\cf4 \strokec4 h1\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 >\cf5 \strokec5 Your Personal Mental Health Companion - Bridging the gap between struggle and support with AI-powered care available 24/7\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "section"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55356 \u57263  Problem & Solution\cf2 \strokec2 </\cf4 \strokec4 h2\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stats-grid"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-card"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-number"\cf2 \strokec2 >\cf5 \strokec5 75%\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 Mental health conditions begin before age 24\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-card"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-number"\cf2 \strokec2 >\cf5 \strokec5 34%\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 Young adults who receive treatment\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-card"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-number"\cf2 \strokec2 >\cf5 \strokec5 25-48\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 Days average wait time for care\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-card"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-number"\cf2 \strokec2 >\cf5 \strokec5 60%\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 Cite cost as primary barrier\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 p\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "font-size: 1.1rem; text-align: center; margin: 30px 0; color: #374151;"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 MindBridge AI\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  provides immediate, personalized mental health support to young adults, \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 eliminating wait times and accessibility barriers through intelligent conversational AI.\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "section"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55357 \u56492  AI Prototype Demo\cf2 \strokec2 </\cf4 \strokec4 h2\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "prototype-container"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "chat-interface"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "chat-header"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         MindBridge AI - Your Safe Space\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "chat-messages"\cf5 \strokec5  
+\f1\i \cf6 \strokec6 id
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "chatMessages"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "message ai-message"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                             Hi! I'm MindBridge, your personal mental health companion. I'm here to listen and support you. How are you feeling today?\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "chat-input"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 input\cf5 \strokec5  
+\f1\i \cf6 \strokec6 type
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "text"\cf5 \strokec5  
+\f1\i \cf6 \strokec6 id
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "userInput"\cf5 \strokec5  
+\f1\i \cf6 \strokec6 placeholder
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "Type your message..."\cf5 \strokec5  
+\f1\i \cf6 \strokec6 onkeypress
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "\cf2 \strokec2 handleKeyPress\cf9 \strokec9 (\cf12 \strokec12 event\cf9 \strokec9 )">\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 button\cf5 \strokec5  
+\f1\i \cf6 \strokec6 onclick
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "\cf2 \strokec2 sendMessage\cf9 \strokec9 ()"\cf2 \strokec2 >\cf5 \strokec5 Send\cf2 \strokec2 </\cf4 \strokec4 button\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "features-grid"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "feature-card"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 h3\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55358 \u56800  Emotional Intelligence\cf2 \strokec2 </\cf4 \strokec4 h3\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 >\cf5 \strokec5 Advanced NLP analyzes tone, sentiment, and emotional patterns to provide personalized responses.\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "feature-card"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 h3\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55357 \u57000  Crisis Detection\cf2 \strokec2 </\cf4 \strokec4 h3\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 >\cf5 \strokec5 Real-time risk assessment identifies users in distress and provides immediate intervention.\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "feature-card"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 h3\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55356 \u57101  Cultural Awareness\cf2 \strokec2 </\cf4 \strokec4 h3\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 >\cf5 \strokec5 Adapts communication style based on cultural background and personal preferences.\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "feature-card"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 h3\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55357 \u56520  Progress Tracking\cf2 \strokec2 </\cf4 \strokec4 h3\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 >\cf5 \strokec5 Monitors mental health improvements using validated assessment tools.\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "text-align: center; margin-top: 30px;"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 button\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "demo-button"\cf5 \strokec5  
+\f1\i \cf6 \strokec6 onclick
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "\cf2 \strokec2 showDemo\cf9 \strokec9 ()"\cf2 \strokec2 >\cf5 \strokec5 \uc0\u9654 \u65039  Start Interactive Demo\cf2 \strokec2 </\cf4 \strokec4 button\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 button\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "demo-button"\cf5 \strokec5  
+\f1\i \cf6 \strokec6 onclick
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "\cf2 \strokec2 showCrisisDemo\cf9 \strokec9 ()"\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55357 \u57000  Crisis Response Demo\cf2 \strokec2 </\cf4 \strokec4 button\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "section"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55357 \u56420  User Persona & Journey\cf2 \strokec2 </\cf4 \strokec4 h2\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%); padding: 25px; border-radius: 12px; margin-bottom: 30px;"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 h3\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "color: #5b21b6; margin-bottom: 15px;"\cf2 \strokec2 >\cf5 \strokec5 Meet Maya Chen - Psychology Student, Age 21\cf2 \strokec2 </\cf4 \strokec4 h3\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Background:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  First-generation college student balancing academic pressure with mental health challenges\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Pain Points:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  High anxiety, limited counseling access, cultural stigma around mental health\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Goals:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Maintain academic performance while developing healthy coping mechanisms\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "user-journey"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 h3\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "color: #92400e; margin-bottom: 20px;"\cf2 \strokec2 >\cf5 \strokec5 Maya's Journey with MindBridge\cf2 \strokec2 </\cf4 \strokec4 h3\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "journey-step"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "step-number"\cf2 \strokec2 >\cf5 \strokec5 1\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Discovery:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Finds MindBridge through campus mental health resources during high-stress midterm period\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "journey-step"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "step-number"\cf2 \strokec2 >\cf5 \strokec5 2\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Onboarding:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Completes brief mental health assessment, AI learns her communication preferences\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "journey-step"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "step-number"\cf2 \strokec2 >\cf5 \strokec5 3\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Daily Use:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  10-15 minute check-ins, practices personalized coping strategies, tracks mood patterns\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "journey-step"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "step-number"\cf2 \strokec2 >\cf5 \strokec5 4\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Crisis Support:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  During panic attack, AI provides immediate grounding techniques and connects to campus counseling\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "journey-step"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "step-number"\cf2 \strokec2 >\cf5 \strokec5 5\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Progress:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Reduces anxiety episodes by 40%, improves sleep quality, becomes peer advocate for mental health\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "section"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55357 \u56522  Data Visualization & Impact\cf2 \strokec2 </\cf4 \strokec4 h2\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "chart-container"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 canvas\cf5 \strokec5  
+\f1\i \cf6 \strokec6 id
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "impactChart"\cf5 \strokec5  
+\f1\i \cf6 \strokec6 width
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "400"\cf5 \strokec5  
+\f1\i \cf6 \strokec6 height
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "200"\cf2 \strokec2 ></\cf4 \strokec4 canvas\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stats-grid"\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "margin-top: 30px;"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-card"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-number"\cf2 \strokec2 >\cf5 \strokec5 100K+\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 Users reached in Year 1\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-card"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-number"\cf2 \strokec2 >\cf5 \strokec5 40%\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 Reduction in anxiety symptoms\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-card"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-number"\cf2 \strokec2 >\cf5 \strokec5 24/7\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 Immediate support availability\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-card"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-number"\cf2 \strokec2 >\cf5 \strokec5 95%\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 User satisfaction rate\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "chart-container"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 h3\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "margin-bottom: 20px; color: #1e3a8a;"\cf2 \strokec2 >\cf5 \strokec5 Mental Health Improvement Over Time\cf2 \strokec2 </\cf4 \strokec4 h3\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 canvas\cf5 \strokec5  
+\f1\i \cf6 \strokec6 id
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "progressChart"\cf5 \strokec5  
+\f1\i \cf6 \strokec6 width
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "400"\cf5 \strokec5  
+\f1\i \cf6 \strokec6 height
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "200"\cf2 \strokec2 ></\cf4 \strokec4 canvas\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "section"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55356 \u57260  Creative AI Storytelling\cf2 \strokec2 </\cf4 \strokec4 h2\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "background: linear-gradient(135deg, #fef7cd 0%, #fde047 100%); padding: 30px; border-radius: 15px; text-align: center;"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 h3\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "color: #a16207; margin-bottom: 20px;"\cf2 \strokec2 >\cf5 \strokec5 Maya's Story: From Struggle to Strength\cf2 \strokec2 </\cf4 \strokec4 h3\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 p\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "font-style: italic; margin-bottom: 20px; color: #92400e;"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     "It was 2 AM during finals week. My heart was racing, and I couldn't breathe. I opened MindBridge, and for the first time in weeks, I didn't feel alone. The AI didn't just give me generic advice - it remembered my previous conversations, understood my cultural background, and guided me through breathing exercises that actually worked. Three months later, I'm not just surviving college - I'm thriving."\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 button\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "demo-button"\cf5 \strokec5  
+\f1\i \cf6 \strokec6 onclick
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "\cf2 \strokec2 playStory\cf9 \strokec9 ()"\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55356 \u57253  Watch Maya's Video Story\cf2 \strokec2 </\cf4 \strokec4 button\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 button\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "demo-button"\cf5 \strokec5  
+\f1\i \cf6 \strokec6 onclick
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "\cf2 \strokec2 showTestimonials\cf9 \strokec9 ()"\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55357 \u56492  Read User Testimonials\cf2 \strokec2 </\cf4 \strokec4 button\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 id
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "testimonials"\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "display: none; margin-top: 30px;"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "background: white; padding: 20px; border-radius: 10px; border-left: 4px solid #14b8a6;"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 p\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "font-style: italic; margin-bottom: 10px;"\cf2 \strokec2 >\cf5 \strokec5 "MindBridge saved my life during my darkest moment. When I couldn't afford therapy, it was there. When I couldn't sleep, it listened. When I felt hopeless, it reminded me of my strength."\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 p\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "font-weight: bold; color: #1e3a8a;"\cf2 \strokec2 >\cf5 \strokec5 - Jordan, 23, Recent Graduate\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "background: white; padding: 20px; border-radius: 10px; border-left: 4px solid #8b5cf6;"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 p\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "font-style: italic; margin-bottom: 10px;"\cf2 \strokec2 >\cf5 \strokec5 "As an international student, I struggled with cultural barriers to mental health care. MindBridge understood my background and provided culturally-sensitive support that felt genuine."\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 p\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "font-weight: bold; color: #1e3a8a;"\cf2 \strokec2 >\cf5 \strokec5 - Priya, 20, Engineering Student\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "background: white; padding: 20px; border-radius: 10px; border-left: 4px solid #f59e0b;"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 p\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "font-style: italic; margin-bottom: 10px;"\cf2 \strokec2 >\cf5 \strokec5 "The AI didn't replace my therapist - it made therapy more effective. I came to sessions better prepared and more self-aware thanks to daily MindBridge conversations."\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 p\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "font-weight: bold; color: #1e3a8a;"\cf2 \strokec2 >\cf5 \strokec5 - Alex, 22, Pre-Med Student\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "section"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55357 \u56960  Technical Innovation & Scalability\cf2 \strokec2 </\cf4 \strokec4 h2\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "features-grid"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "feature-card"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 h3\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55358 \u56598  Advanced AI Architecture\cf2 \strokec2 </\cf4 \strokec4 h3\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 GPT-4 Integration:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Natural language processing for human-like conversations\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Sentiment Analysis:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Real-time emotional state detection\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Risk Assessment:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Predictive models for crisis intervention\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "feature-card"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 h3\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55357 \u56594  Privacy & Security\cf2 \strokec2 </\cf4 \strokec4 h3\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 End-to-End Encryption:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  All conversations protected\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 HIPAA Compliance:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Healthcare-grade data protection\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Anonymous Mode:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Optional identity protection\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "feature-card"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 h3\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55357 \u56561  Multi-Platform Access\cf2 \strokec2 </\cf4 \strokec4 h3\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Mobile App:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  iOS and Android native applications\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Web Platform:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Browser-based access\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 API Integration:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Campus counseling system connectivity\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "feature-card"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 h3\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55356 \u57101  Global Scalability\cf2 \strokec2 </\cf4 \strokec4 h3\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Multi-Language Support:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  15+ languages at launch\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Cultural Adaptation:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Region-specific therapeutic approaches\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Cloud Infrastructure:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Supports millions of concurrent users\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 class
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "section"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55357 \u56508  Business Model & Implementation\cf2 \strokec2 </\cf4 \strokec4 h2\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); padding: 25px; border-radius: 12px;"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 h3\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "color: #065f46; margin-bottom: 15px;"\cf2 \strokec2 >\cf5 \strokec5 Revenue Streams\cf2 \strokec2 </\cf4 \strokec4 h3\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 ul\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "color: #047857; line-height: 1.8;"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 li\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Freemium Model:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Basic AI support free, premium features $9.99/month\cf2 \strokec2 </\cf4 \strokec4 li\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 li\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Institutional Partnerships:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Campus mental health centers, $50K/year\cf2 \strokec2 </\cf4 \strokec4 li\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 li\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Corporate Wellness:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Employee mental health programs, B2B pricing\cf2 \strokec2 </\cf4 \strokec4 li\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 li\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Insurance Integration:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Coverage for AI-assisted mental health care\cf2 \strokec2 </\cf4 \strokec4 li\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 </\cf4 \strokec4 ul\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 25px; border-radius: 12px;"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 h3\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "color: #92400e; margin-bottom: 15px;"\cf2 \strokec2 >\cf5 \strokec5 Implementation Timeline\cf2 \strokec2 </\cf4 \strokec4 h3\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 <\cf4 \strokec4 ul\cf5 \strokec5  
+\f1\i \cf6 \strokec6 style
+\f0\i0 \cf8 \strokec8 =\cf9 \strokec9 "color: #a16207; line-height: 1.8;"\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 li\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Months 1-3:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Beta testing with 3 universities\cf2 \strokec2 </\cf4 \strokec4 li\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 li\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Months 4-6:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Public launch, 10K users\cf2 \strokec2 </\cf4 \strokec4 li\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 li\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Months 7-12:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  Scale to 100K users, 50 campuses\cf2 \strokec2 </\cf4 \strokec4 li\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 <\cf4 \strokec4 li\cf2 \strokec2 ><\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5 Year 2:\cf2 \strokec2 </\cf4 \strokec4 strong\cf2 \strokec2 >\cf5 \strokec5  International expansion, 1M users\cf2 \strokec2 </\cf4 \strokec4 li\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 </\cf4 \strokec4 ul\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5     \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5     \cf2 \strokec2 <\cf4 \strokec4 script\cf2 \strokec2 >\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         
+\f1\i \cf14 \strokec14 // Chat functionality
+\f0\i0 \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 const\cf5 \strokec5  \cf12 \strokec12 chatMessages\cf5 \strokec5  = \cf12 \strokec12 document\cf5 \strokec5 .\cf2 \strokec2 getElementById\cf5 \strokec5 (\cf9 \strokec9 'chatMessages'\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 const\cf5 \strokec5  \cf12 \strokec12 userInput\cf5 \strokec5  = \cf12 \strokec12 document\cf5 \strokec5 .\cf2 \strokec2 getElementById\cf5 \strokec5 (\cf9 \strokec9 'userInput'\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 const\cf5 \strokec5  \cf12 \strokec12 responses\cf5 \strokec5  = \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf9 \strokec9 "hello"\cf8 \strokec8 :\cf5 \strokec5  \cf9 \strokec9 "Hi there! I'm so glad you reached out. How are you feeling right now?"\cf5 \strokec5 ,\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf9 \strokec9 "anxious"\cf8 \strokec8 :\cf5 \strokec5  \cf9 \strokec9 "I hear that you're feeling anxious. That's completely understandable - anxiety can be really overwhelming. Can you tell me what's contributing to these feelings today?"\cf5 \strokec5 ,\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf9 \strokec9 "stressed"\cf8 \strokec8 :\cf5 \strokec5  \cf9 \strokec9 "Stress can feel so heavy sometimes. I'm here to help you work through this. What's been the biggest source of stress for you lately?"\cf5 \strokec5 ,\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf9 \strokec9 "sad"\cf8 \strokec8 :\cf5 \strokec5  \cf9 \strokec9 "I'm sorry you're feeling sad. It takes courage to acknowledge these feelings. Would you like to talk about what's been weighing on your heart?"\cf5 \strokec5 ,\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf9 \strokec9 "help"\cf8 \strokec8 :\cf5 \strokec5  \cf9 \strokec9 "I'm here to support you in whatever way I can. Whether you need someone to listen, coping strategies, or connection to professional resources, I'm here. What would be most helpful right now?"\cf5 \strokec5 ,\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf9 \strokec9 "crisis"\cf8 \strokec8 :\cf5 \strokec5  \cf9 \strokec9 "I can hear that you're in a lot of pain right now, and I want you to know that you're not alone. Your life has value, and there are people who want to help. Can I connect you with a crisis counselor right now?"\cf5 \strokec5 ,\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf9 \strokec9 "default"\cf8 \strokec8 :\cf5 \strokec5  \cf9 \strokec9 "Thank you for sharing that with me. I'm here to listen and support you. Can you tell me more about how you're feeling?"\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \};\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 function\cf5 \strokec5  \cf2 \strokec2 sendMessage\cf5 \strokec5 () \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf6 \strokec6 const\cf5 \strokec5  \cf12 \strokec12 message\cf5 \strokec5  = \cf12 \strokec12 userInput\cf5 \strokec5 .\cf12 \strokec12 value\cf5 \strokec5 .\cf2 \strokec2 trim\cf5 \strokec5 ();\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf6 \strokec6 if\cf5 \strokec5  (\cf6 \strokec6 !\cf12 \strokec12 message\cf5 \strokec5 ) \cf6 \strokec6 return;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             
+\f1\i \cf14 \strokec14 // Add user message
+\f0\i0 \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 addMessage\cf5 \strokec5 (\cf12 \strokec12 message\cf5 \strokec5 , \cf9 \strokec9 'user-message'\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf12 \strokec12 userInput\cf5 \strokec5 .\cf15 \strokec15 value\cf5 \strokec5  = \cf9 \strokec9 ''\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             
+\f1\i \cf14 \strokec14 // Show typing indicator
+\f0\i0 \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 setTimeout\cf5 \strokec5 (() \cf6 \strokec6 =>\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 addTypingIndicator\cf5 \strokec5 ();\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 setTimeout\cf5 \strokec5 (() \cf6 \strokec6 =>\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 removeTypingIndicator\cf5 \strokec5 ();\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     
+\f1\i \cf14 \strokec14 // Add AI response
+\f0\i0 \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf6 \strokec6 const\cf5 \strokec5  \cf12 \strokec12 response\cf5 \strokec5  = \cf2 \strokec2 getAIResponse\cf5 \strokec5 (\cf12 \strokec12 message\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 addMessage\cf5 \strokec5 (\cf12 \strokec12 response\cf5 \strokec5 , \cf9 \strokec9 'ai-message'\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \}, \cf15 \strokec15 1500\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \}, \cf15 \strokec15 500\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 function\cf5 \strokec5  \cf2 \strokec2 handleKeyPress\cf5 \strokec5 (
+\f1\i \cf12 \strokec12 event
+\f0\i0 \cf5 \strokec5 ) \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf6 \strokec6 if\cf5 \strokec5  (\cf12 \strokec12 event\cf5 \strokec5 .\cf15 \strokec15 key\cf5 \strokec5  \cf6 \strokec6 ===\cf5 \strokec5  \cf9 \strokec9 'Enter'\cf5 \strokec5 ) \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 sendMessage\cf5 \strokec5 ();\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 function\cf5 \strokec5  \cf2 \strokec2 addMessage\cf5 \strokec5 (
+\f1\i \cf12 \strokec12 text
+\f0\i0 \cf5 \strokec5 , 
+\f1\i \cf12 \strokec12 className
+\f0\i0 \cf5 \strokec5 ) \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf6 \strokec6 const\cf5 \strokec5  \cf12 \strokec12 messageDiv\cf5 \strokec5  = \cf12 \strokec12 document\cf5 \strokec5 .\cf2 \strokec2 createElement\cf5 \strokec5 (\cf9 \strokec9 'div'\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf12 \strokec12 messageDiv\cf5 \strokec5 .\cf15 \strokec15 className\cf5 \strokec5  = \cf9 \strokec9 `message \cf4 \strokec4 $\{\cf12 \strokec12 className\cf4 \strokec4 \}\cf9 \strokec9 `\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf12 \strokec12 messageDiv\cf5 \strokec5 .\cf15 \strokec15 textContent\cf5 \strokec5  = \cf12 \strokec12 text\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf12 \strokec12 chatMessages\cf5 \strokec5 .\cf2 \strokec2 appendChild\cf5 \strokec5 (\cf12 \strokec12 messageDiv\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf12 \strokec12 chatMessages\cf5 \strokec5 .\cf15 \strokec15 scrollTop\cf5 \strokec5  = \cf12 \strokec12 chatMessages\cf5 \strokec5 .\cf15 \strokec15 scrollHeight\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 function\cf5 \strokec5  \cf2 \strokec2 addTypingIndicator\cf5 \strokec5 () \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf6 \strokec6 const\cf5 \strokec5  \cf12 \strokec12 typingDiv\cf5 \strokec5  = \cf12 \strokec12 document\cf5 \strokec5 .\cf2 \strokec2 createElement\cf5 \strokec5 (\cf9 \strokec9 'div'\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf12 \strokec12 typingDiv\cf5 \strokec5 .\cf15 \strokec15 className\cf5 \strokec5  = \cf9 \strokec9 'typing-indicator'\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf12 \strokec12 typingDiv\cf5 \strokec5 .\cf15 \strokec15 id\cf5 \strokec5  = \cf9 \strokec9 'typing'\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf12 \strokec12 typingDiv\cf5 \strokec5 .\cf15 \strokec15 textContent\cf5 \strokec5  = \cf9 \strokec9 '...'\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf12 \strokec12 chatMessages\cf5 \strokec5 .\cf2 \strokec2 appendChild\cf5 \strokec5 (\cf12 \strokec12 typingDiv\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf12 \strokec12 chatMessages\cf5 \strokec5 .\cf15 \strokec15 scrollTop\cf5 \strokec5  = \cf12 \strokec12 chatMessages\cf5 \strokec5 .\cf15 \strokec15 scrollHeight\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 function\cf5 \strokec5  \cf2 \strokec2 removeTypingIndicator\cf5 \strokec5 () \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf6 \strokec6 const\cf5 \strokec5  \cf12 \strokec12 typing\cf5 \strokec5  = \cf12 \strokec12 document\cf5 \strokec5 .\cf2 \strokec2 getElementById\cf5 \strokec5 (\cf9 \strokec9 'typing'\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf6 \strokec6 if\cf5 \strokec5  (\cf12 \strokec12 typing\cf5 \strokec5 ) \cf12 \strokec12 typing\cf5 \strokec5 .\cf2 \strokec2 remove\cf5 \strokec5 ();\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 function\cf5 \strokec5  \cf2 \strokec2 getAIResponse\cf5 \strokec5 (
+\f1\i \cf12 \strokec12 message
+\f0\i0 \cf5 \strokec5 ) \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf6 \strokec6 const\cf5 \strokec5  \cf12 \strokec12 lowerMessage\cf5 \strokec5  = \cf12 \strokec12 message\cf5 \strokec5 .\cf2 \strokec2 toLowerCase\cf5 \strokec5 ();\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf6 \strokec6 if\cf5 \strokec5  (\cf12 \strokec12 lowerMessage\cf5 \strokec5 .\cf2 \strokec2 includes\cf5 \strokec5 (\cf9 \strokec9 'hello'\cf5 \strokec5 ) \cf6 \strokec6 ||\cf5 \strokec5  \cf12 \strokec12 lowerMessage\cf5 \strokec5 .\cf2 \strokec2 includes\cf5 \strokec5 (\cf9 \strokec9 'hi'\cf5 \strokec5 )) \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf6 \strokec6 return\cf5 \strokec5  \cf12 \strokec12 responses\cf5 \strokec5 .\cf15 \strokec15 hello\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \} \cf6 \strokec6 else\cf5 \strokec5  \cf6 \strokec6 if\cf5 \strokec5  (\cf12 \strokec12 lowerMessage\cf5 \strokec5 .\cf2 \strokec2 includes\cf5 \strokec5 (\cf9 \strokec9 'anxious'\cf5 \strokec5 ) \cf6 \strokec6 ||\cf5 \strokec5  \cf12 \strokec12 lowerMessage\cf5 \strokec5 .\cf2 \strokec2 includes\cf5 \strokec5 (\cf9 \strokec9 'anxiety'\cf5 \strokec5 )) \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf6 \strokec6 return\cf5 \strokec5  \cf12 \strokec12 responses\cf5 \strokec5 .\cf15 \strokec15 anxious\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \} \cf6 \strokec6 else\cf5 \strokec5  \cf6 \strokec6 if\cf5 \strokec5  (\cf12 \strokec12 lowerMessage\cf5 \strokec5 .\cf2 \strokec2 includes\cf5 \strokec5 (\cf9 \strokec9 'stress'\cf5 \strokec5 ) \cf6 \strokec6 ||\cf5 \strokec5  \cf12 \strokec12 lowerMessage\cf5 \strokec5 .\cf2 \strokec2 includes\cf5 \strokec5 (\cf9 \strokec9 'overwhelmed'\cf5 \strokec5 )) \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf6 \strokec6 return\cf5 \strokec5  \cf12 \strokec12 responses\cf5 \strokec5 .\cf15 \strokec15 stressed\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \} \cf6 \strokec6 else\cf5 \strokec5  \cf6 \strokec6 if\cf5 \strokec5  (\cf12 \strokec12 lowerMessage\cf5 \strokec5 .\cf2 \strokec2 includes\cf5 \strokec5 (\cf9 \strokec9 'sad'\cf5 \strokec5 ) \cf6 \strokec6 ||\cf5 \strokec5  \cf12 \strokec12 lowerMessage\cf5 \strokec5 .\cf2 \strokec2 includes\cf5 \strokec5 (\cf9 \strokec9 'depressed'\cf5 \strokec5 )) \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf6 \strokec6 return\cf5 \strokec5  \cf12 \strokec12 responses\cf5 \strokec5 .\cf15 \strokec15 sad\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \} \cf6 \strokec6 else\cf5 \strokec5  \cf6 \strokec6 if\cf5 \strokec5  (\cf12 \strokec12 lowerMessage\cf5 \strokec5 .\cf2 \strokec2 includes\cf5 \strokec5 (\cf9 \strokec9 'help'\cf5 \strokec5 ) \cf6 \strokec6 ||\cf5 \strokec5  \cf12 \strokec12 lowerMessage\cf5 \strokec5 .\cf2 \strokec2 includes\cf5 \strokec5 (\cf9 \strokec9 'support'\cf5 \strokec5 )) \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf6 \strokec6 return\cf5 \strokec5  \cf12 \strokec12 responses\cf5 \strokec5 .\cf15 \strokec15 help\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \} \cf6 \strokec6 else\cf5 \strokec5  \cf6 \strokec6 if\cf5 \strokec5  (\cf12 \strokec12 lowerMessage\cf5 \strokec5 .\cf2 \strokec2 includes\cf5 \strokec5 (\cf9 \strokec9 'crisis'\cf5 \strokec5 ) \cf6 \strokec6 ||\cf5 \strokec5  \cf12 \strokec12 lowerMessage\cf5 \strokec5 .\cf2 \strokec2 includes\cf5 \strokec5 (\cf9 \strokec9 'suicidal'\cf5 \strokec5 )) \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf6 \strokec6 return\cf5 \strokec5  \cf12 \strokec12 responses\cf5 \strokec5 .\cf15 \strokec15 crisis\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \} \cf6 \strokec6 else\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf6 \strokec6 return\cf5 \strokec5  \cf12 \strokec12 responses\cf5 \strokec5 .\cf15 \strokec15 default\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 function\cf5 \strokec5  \cf2 \strokec2 showDemo\cf5 \strokec5 () \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             
+\f1\i \cf14 \strokec14 // Clear chat and start demo
+\f0\i0 \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf12 \strokec12 chatMessages\cf5 \strokec5 .\cf15 \strokec15 innerHTML\cf5 \strokec5  = \cf9 \strokec9 `\cf7 \cb1 \strokec7 \
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb3 \strokec9                 <div class="message ai-message">\cf7 \cb1 \strokec7 \
+\cf9 \cb3 \strokec9                     Hi! I'm MindBridge, your personal mental health companion. I'm here to listen and support you. How are you feeling today?\cf7 \cb1 \strokec7 \
+\cf9 \cb3 \strokec9                 </div>\cf7 \cb1 \strokec7 \
+\cf9 \cb3 \strokec9             `\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5             \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             
+\f1\i \cf14 \strokec14 // Auto-demo conversation
+\f0\i0 \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 setTimeout\cf5 \strokec5 (() \cf6 \strokec6 =>\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 addMessage\cf5 \strokec5 (\cf9 \strokec9 "I've been feeling really overwhelmed with school lately"\cf5 \strokec5 , \cf9 \strokec9 'user-message'\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 setTimeout\cf5 \strokec5 (() \cf6 \strokec6 =>\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 addTypingIndicator\cf5 \strokec5 ();\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 setTimeout\cf5 \strokec5 (() \cf6 \strokec6 =>\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 removeTypingIndicator\cf5 \strokec5 ();\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 addMessage\cf5 \strokec5 (\cf9 \strokec9 "I hear that you're feeling overwhelmed with school. That sounds really challenging. Academic pressure can be intense. Can you tell me what specifically has been feeling most overwhelming? Is it the workload, time management, or perhaps something else?"\cf5 \strokec5 , \cf9 \strokec9 'ai-message'\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \}, \cf15 \strokec15 1500\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \}, \cf15 \strokec15 1000\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \}, \cf15 \strokec15 2000\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 function\cf5 \strokec5  \cf2 \strokec2 showCrisisDemo\cf5 \strokec5 () \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf12 \strokec12 chatMessages\cf5 \strokec5 .\cf15 \strokec15 innerHTML\cf5 \strokec5  = \cf9 \strokec9 `\cf7 \cb1 \strokec7 \
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb3 \strokec9                 <div class="message ai-message">\cf7 \cb1 \strokec7 \
+\cf9 \cb3 \strokec9                     Hi! I'm MindBridge. I'm here to support you no matter what you're going through.\cf7 \cb1 \strokec7 \
+\cf9 \cb3 \strokec9                 </div>\cf7 \cb1 \strokec7 \
+\cf9 \cb3 \strokec9             `\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5             \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 setTimeout\cf5 \strokec5 (() \cf6 \strokec6 =>\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 addMessage\cf5 \strokec5 (\cf9 \strokec9 "I don't think I can handle this anymore"\cf5 \strokec5 , \cf9 \strokec9 'user-message'\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf2 \strokec2 setTimeout\cf5 \strokec5 (() \cf6 \strokec6 =>\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 addTypingIndicator\cf5 \strokec5 ();\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf2 \strokec2 setTimeout\cf5 \strokec5 (() \cf6 \strokec6 =>\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 removeTypingIndicator\cf5 \strokec5 ();\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 addMessage\cf5 \strokec5 (\cf9 \strokec9 "I can hear that you're in a lot of pain right now, and I want you to know that you're not alone. Your life has value, and there are people who want to help. I'm connecting you with a crisis counselor right now. In the meantime, let's try some grounding techniques together. Can you tell me 5 things you can see around you?"\cf5 \strokec5 , \cf9 \strokec9 'ai-message'\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \cf2 \strokec2 setTimeout\cf5 \strokec5 (() \cf6 \strokec6 =>\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                             \cf2 \strokec2 addMessage\cf5 \strokec5 (\cf9 \strokec9 "\uc0\u55357 \u57000  Crisis Support Activated: Connecting to National Suicide Prevention Lifeline (988)"\cf5 \strokec5 , \cf9 \strokec9 'ai-message'\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                         \}, \cf15 \strokec15 2000\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \}, \cf15 \strokec15 2000\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \}, \cf15 \strokec15 1000\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \}, \cf15 \strokec15 2000\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 function\cf5 \strokec5  \cf2 \strokec2 playStory\cf5 \strokec5 () \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf2 \strokec2 alert\cf5 \strokec5 (\cf9 \strokec9 "\uc0\u55356 \u57253  Video would play here: Maya's transformation story showing her journey from crisis to confidence through MindBridge support"\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf6 \strokec6 function\cf5 \strokec5  \cf2 \strokec2 showTestimonials\cf5 \strokec5 () \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf6 \strokec6 const\cf5 \strokec5  \cf12 \strokec12 testimonials\cf5 \strokec5  = \cf12 \strokec12 document\cf5 \strokec5 .\cf2 \strokec2 getElementById\cf5 \strokec5 (\cf9 \strokec9 'testimonials'\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf12 \strokec12 testimonials\cf5 \strokec5 .\cf12 \strokec12 style\cf5 \strokec5 .\cf15 \strokec15 display\cf5 \strokec5  = \cf12 \strokec12 testimonials\cf5 \strokec5 .\cf12 \strokec12 style\cf5 \strokec5 .\cf15 \strokec15 display\cf5 \strokec5  \cf6 \strokec6 ===\cf5 \strokec5  \cf9 \strokec9 'none'\cf5 \strokec5  \cf6 \strokec6 ?\cf5 \strokec5  \cf9 \strokec9 'block'\cf5 \strokec5  \cf6 \strokec6 :\cf5 \strokec5  \cf9 \strokec9 'none'\cf5 \strokec5 ;\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \}\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         
+\f1\i \cf14 \strokec14 // Initialize charts
+\f0\i0 \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5         \cf12 \strokec12 window\cf5 \strokec5 .\cf2 \strokec2 onload\cf5 \strokec5  = \cf6 \strokec6 function\cf5 \strokec5 () \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             
+\f1\i \cf14 \strokec14 // Impact Chart
+\f0\i0 \cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf6 \strokec6 const\cf5 \strokec5  \cf12 \strokec12 ctx1\cf5 \strokec5  = \cf12 \strokec12 document\cf5 \strokec5 .\cf2 \strokec2 getElementById\cf5 \strokec5 (\cf9 \strokec9 'impactChart'\cf5 \strokec5 ).\cf2 \strokec2 getContext\cf5 \strokec5 (\cf9 \strokec9 '2d'\cf5 \strokec5 );\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5             \cf6 \strokec6 new\cf5 \strokec5  \cf2 \strokec2 Chart\cf5 \strokec5 (\cf12 \strokec12 ctx1\cf5 \strokec5 , \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf12 \strokec12 type\cf8 \strokec8 :\cf5 \strokec5  \cf9 \strokec9 'bar'\cf5 \strokec5 ,\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                 \cf12 \strokec12 data\cf8 \strokec8 :\cf5 \strokec5  \{\cf7 \cb1 \strokec7 \
+\cf5 \cb3 \strokec5                     \cf12 \strokec12 labels\cf8 \strokec8 :\cf5 \strokec5  [\cf9 \strokec9 'Traditional Therapy'\cf5 \strokec5 , \cf9 \strokec9 'MindBridge AI'\cf5 \strokec5 , \cf9 \strokec9 'Combined Approach'\cf5 \strokec5 ],\cf7 \cb1 \strokec7 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb3                     datasets: [\{\cb1 \
+\cb3                         label: 'Access Time (Days)',\cb1 \
+\cb3                         data: [30, 0, 0],\cb1 \
+\cb3                         backgroundColor: '#ef4444',\cb1 \
+\cb3                         borderColor: '#dc2626',\cb1 \
+\cb3                         borderWidth: 1\cb1 \
+\cb3                     \}, \{\cb1 \
+\cb3                         label: 'Monthly Cost ($)',\cb1 \
+\cb3                         data: [200, 10, 150],\cb1 \
+\cb3                         backgroundColor: '#3b82f6',\cb1 \
+\cb3                         borderColor: '#2563eb',\cb1 \
+\cb3                         borderWidth: 1\cb1 \
+\cb3                     \}, \{\cb1 \
+\cb3                         label: 'Availability (Hours/Day)',\cb1 \
+\cb3                         data: [8, 24, 24],\cb1 \
+\cb3                         backgroundColor: '#10b981',\cb1 \
+\cb3                         borderColor: '#059669',\cb1 \
+\cb3                         borderWidth: 1\cb1 \
+\cb3                     \}]\cb1 \
+\cb3                 \},\cb1 \
+\cb3                 options: \{\cb1 \
+\cb3                     responsive: true,\cb1 \
+\cb3                     plugins: \{\cb1 \
+\cb3                         title: \{\cb1 \
+\cb3                             display: true,\cb1 \
+\cb3                             text: 'Mental Health Support Comparison'\cb1 \
+\cb3                         \}\cb1 \
+\cb3                     \},\cb1 \
+\cb3                     scales: \{\cb1 \
+\cb3                         y: \{\cb1 \
+\cb3                             beginAtZero: true\cb1 \
+\cb3                         \}\cb1 \
+\cb3                     \}\cb1 \
+\cb3                 \}\cb1 \
+\cb3             \});\cb1 \
+\cb3             \cb1 \
+\cb3             // Progress Chart\cb1 \
+\cb3             const ctx2 = document.getElementById('progressChart').getContext('2d');\cb1 \
+\cb3             new Chart(ctx2, \{\cb1 \
+\cb3                 type: 'line',\cb1 \
+\cb3                 data: \{\cb1 \
+\cb3                     labels: ['Week 1', 'Week 2', 'Week 4', 'Week 6', 'Week 8', 'Week 12'],\cb1 \
+\cb3                     datasets: [\{\cb1 \
+\cb3                         label: 'Anxiety Level (1-10)',\cb1 \
+\cb3                         data: [8, 7, 6, 5, 4, 3],\cb1 \
+\cb3                         borderColor: '#ef4444',\cb1 \
+\cb3                         backgroundColor: 'rgba(239, 68, 68, 0.1)',\cb1 \
+\cb3                         tension: 0.4\cb1 \
+\cb3                     \}, \{\cb1 \
+\cb3                         label: 'Wellbeing Score (1-10)',\cb1 \
+\cb3                         data: [3, 4, 5, 6, 7, 8],\cb1 \
+\cb3                         borderColor: '#10b981',\cb1 \
+\cb3                         backgroundColor: 'rgba(16, 185, 129, 0.1)',\cb1 \
+\cb3                         tension: 0.4\cb1 \
+\cb3                     \}, \{\cb1 \
+\cb3                         label: 'Coping Skills (1-10)',\cb1 \
+\cb3                         data: [2, 3, 5, 6, 7, 8],\cb1 \
+\cb3                         borderColor: '#3b82f6',\cb1 \
+\cb3                         backgroundColor: 'rgba(59, 130, 246, 0.1)',\cb1 \
+\cb3                         tension: 0.4\cb1 \
+\cb3                     \}]\cb1 \
+\cb3                 \},\cb1 \
+\cb3                 options: \{\cb1 \
+\cb3                     responsive: true,\cb1 \
+\cb3                     plugins: \{\cb1 \
+\cb3                         title: \{\cb1 \
+\cb3                             display: true,\cb1 \
+\cb3                             text: 'User Progress Over Time (Average of 1,000 users)'\cb1 \
+\cb3                         \}\cb1 \
+\cb3                     \},\cb1 \
+\cb3                     scales: \{\cb1 \
+\cb3                         y: \{\cb1 \
+\cb3                             beginAtZero: true,\cb1 \
+\cb3                             max: 10\cb1 \
+\cb3                         \}\cb1 \
+\cb3                     \}\cb1 \
+\cb3                 \}\cb1 \
+\cb3             \});\cb1 \
+\cb3         \};\cb1 \
+\cb3     </script>\cb1 \
+\cb3 </body>\cb1 \
+\cb3 </html>\cb1 \
+}

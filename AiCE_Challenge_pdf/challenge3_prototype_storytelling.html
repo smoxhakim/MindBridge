@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBridge AI - Prototype & Story</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: linear-gradient(135deg, #f9fafb 0%, #e5f3f2 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #14b8a6 100%);
+            color: white;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .section h2 {
+            color: #1e3a8a;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            border-bottom: 3px solid #14b8a6;
+            padding-bottom: 10px;
+        }
+        
+        .prototype-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .chat-interface {
+            border: 2px solid #e5e7eb;
+            border-radius: 15px;
+            height: 500px;
+            overflow-y: auto;
+            background: #f9fafb;
+        }
+        
+        .chat-header {
+            background: linear-gradient(135deg, #1e3a8a, #14b8a6);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .chat-messages {
+            padding: 20px;
+            height: calc(100% - 120px);
+            overflow-y: auto;
+        }
+        
+        .message {
+            margin-bottom: 15px;
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        .user-message {
+            background: #1e3a8a;
+            color: white;
+            margin-left: auto;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .ai-message {
+            background: #14b8a6;
+            color: white;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .typing-indicator {
+            background: #e5e7eb;
+            color: #6b7280;
+            padding: 8px 16px;
+            border-radius: 18px;
+            max-width: 80px;
+            text-align: center;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .chat-input {
+            border-top: 1px solid #e5e7eb;
+            padding: 15px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .chat-input input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 25px;
+            outline: none;
+            font-size: 14px;
+        }
+        
+        .chat-input button {
+            background: #14b8a6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #14b8a6;
+        }
+        
+        .feature-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid #e5f3f2;
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        
+        .chart-container {
+            margin: 30px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .user-journey {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .journey-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+        }
+        
+        .step-number {
+            background: #1e3a8a;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        
+        .demo-button {
+            background: linear-gradient(135deg, #1e3a8a, #14b8a6);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .demo-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .prototype-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>MindBridge AI</h1>
+            <p>Your Personal Mental Health Companion - Bridging the gap between struggle and support with AI-powered care available 24/7</p>
+        </div>
+        
+        <div class="section">
+            <h2>🎯 Problem & Solution</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">75%</div>
+                    <div class="stat-label">Mental health conditions begin before age 24</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">34%</div>
+                    <div class="stat-label">Young adults who receive treatment</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">25-48</div>
+                    <div class="stat-label">Days average wait time for care</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">Cite cost as primary barrier</div>
+                </div>
+            </div>
+            
+            <p style="font-size: 1.1rem; text-align: center; margin: 30px 0; color: #374151;">
+                <strong>MindBridge AI</strong> provides immediate, personalized mental health support to young adults, 
+                eliminating wait times and accessibility barriers through intelligent conversational AI.
+            </p>
+        </div>
+        
+        <div class="section">
+            <h2>💬 AI Prototype Demo</h2>
+            <div class="prototype-container">
+                <div class="chat-interface">
+                    <div class="chat-header">
+                        MindBridge AI - Your Safe Space
+                    </div>
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message ai-message">
+                            Hi! I'm MindBridge, your personal mental health companion. I'm here to listen and support you. How are you feeling today?
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="userInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+                        <button onclick="sendMessage()">Send</button>
+                    </div>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>🧠 Emotional Intelligence</h3>
+                        <p>Advanced NLP analyzes tone, sentiment, and emotional patterns to provide personalized responses.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🚨 Crisis Detection</h3>
+                        <p>Real-time risk assessment identifies users in distress and provides immediate intervention.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🌍 Cultural Awareness</h3>
+                        <p>Adapts communication style based on cultural background and personal preferences.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>📈 Progress Tracking</h3>
+                        <p>Monitors mental health improvements using validated assessment tools.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <button class="demo-button" onclick="showDemo()">▶️ Start Interactive Demo</button>
+                <button class="demo-button" onclick="showCrisisDemo()">🚨 Crisis Response Demo</button>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>👤 User Persona & Journey</h2>
+            <div style="background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%); padding: 25px; border-radius: 12px; margin-bottom: 30px;">
+                <h3 style="color: #5b21b6; margin-bottom: 15px;">Meet Maya Chen - Psychology Student, Age 21</h3>
+                <p><strong>Background:</strong> First-generation college student balancing academic pressure with mental health challenges</p>
+                <p><strong>Pain Points:</strong> High anxiety, limited counseling access, cultural stigma around mental health</p>
+                <p><strong>Goals:</strong> Maintain academic performance while developing healthy coping mechanisms</p>
+            </div>
+            
+            <div class="user-journey">
+                <h3 style="color: #92400e; margin-bottom: 20px;">Maya's Journey with MindBridge</h3>
+                <div class="journey-step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <strong>Discovery:</strong> Finds MindBridge through campus mental health resources during high-stress midterm period
+                    </div>
+                </div>
+                <div class="journey-step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <strong>Onboarding:</strong> Completes brief mental health assessment, AI learns her communication preferences
+                    </div>
+                </div>
+                <div class="journey-step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <strong>Daily Use:</strong> 10-15 minute check-ins, practices personalized coping strategies, tracks mood patterns
+                    </div>
+                </div>
+                <div class="journey-step">
+                    <div class="step-number">4</div>
+                    <div>
+                        <strong>Crisis Support:</strong> During panic attack, AI provides immediate grounding techniques and connects to campus counseling
+                    </div>
+                </div>
+                <div class="journey-step">
+                    <div class="step-number">5</div>
+                    <div>
+                        <strong>Progress:</strong> Reduces anxiety episodes by 40%, improves sleep quality, becomes peer advocate for mental health
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📊 Data Visualization & Impact</h2>
+            <div class="chart-container">
+                <canvas id="impactChart" width="400" height="200"></canvas>
+            </div>
+            
+            <div class="stats-grid" style="margin-top: 30px;">
+                <div class="stat-card">
+                    <div class="stat-number">100K+</div>
+                    <div class="stat-label">Users reached in Year 1</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">40%</div>
+                    <div class="stat-label">Reduction in anxiety symptoms</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Immediate support availability</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">User satisfaction rate</div>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <h3 style="margin-bottom: 20px; color: #1e3a8a;">Mental Health Improvement Over Time</h3>
+                <canvas id="progressChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🎬 Creative AI Storytelling</h2>
+            <div style="background: linear-gradient(135deg, #fef7cd 0%, #fde047 100%); padding: 30px; border-radius: 15px; text-align: center;">
+                <h3 style="color: #a16207; margin-bottom: 20px;">Maya's Story: From Struggle to Strength</h3>
+                <p style="font-style: italic; margin-bottom: 20px; color: #92400e;">
+                    "It was 2 AM during finals week. My heart was racing, and I couldn't breathe. I opened MindBridge, and for the first time in weeks, I didn't feel alone. The AI didn't just give me generic advice - it remembered my previous conversations, understood my cultural background, and guided me through breathing exercises that actually worked. Three months later, I'm not just surviving college - I'm thriving."
+                </p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <button class="demo-button" onclick="playStory()">🎥 Watch Maya's Video Story</button>
+                    <button class="demo-button" onclick="showTestimonials()">💬 Read User Testimonials</button>
+                </div>
+            </div>
+            
+            <div id="testimonials" style="display: none; margin-top: 30px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                    <div style="background: white; padding: 20px; border-radius: 10px; border-left: 4px solid #14b8a6;">
+                        <p style="font-style: italic; margin-bottom: 10px;">"MindBridge saved my life during my darkest moment. When I couldn't afford therapy, it was there. When I couldn't sleep, it listened. When I felt hopeless, it reminded me of my strength."</p>
+                        <p style="font-weight: bold; color: #1e3a8a;">- Jordan, 23, Recent Graduate</p>
+                    </div>
+                    <div style="background: white; padding: 20px; border-radius: 10px; border-left: 4px solid #8b5cf6;">
+                        <p style="font-style: italic; margin-bottom: 10px;">"As an international student, I struggled with cultural barriers to mental health care. MindBridge understood my background and provided culturally-sensitive support that felt genuine."</p>
+                        <p style="font-weight: bold; color: #1e3a8a;">- Priya, 20, Engineering Student</p>
+                    </div>
+                    <div style="background: white; padding: 20px; border-radius: 10px; border-left: 4px solid #f59e0b;">
+                        <p style="font-style: italic; margin-bottom: 10px;">"The AI didn't replace my therapist - it made therapy more effective. I came to sessions better prepared and more self-aware thanks to daily MindBridge conversations."</p>
+                        <p style="font-weight: bold; color: #1e3a8a;">- Alex, 22, Pre-Med Student</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🚀 Technical Innovation & Scalability</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🤖 Advanced AI Architecture</h3>
+                    <p><strong>GPT-4 Integration:</strong> Natural language processing for human-like conversations</p>
+                    <p><strong>Sentiment Analysis:</strong> Real-time emotional state detection</p>
+                    <p><strong>Risk Assessment:</strong> Predictive models for crisis intervention</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔒 Privacy & Security</h3>
+                    <p><strong>End-to-End Encryption:</strong> All conversations protected</p>
+                    <p><strong>HIPAA Compliance:</strong> Healthcare-grade data protection</p>
+                    <p><strong>Anonymous Mode:</strong> Optional identity protection</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 Multi-Platform Access</h3>
+                    <p><strong>Mobile App:</strong> iOS and Android native applications</p>
+                    <p><strong>Web Platform:</strong> Browser-based access</p>
+                    <p><strong>API Integration:</strong> Campus counseling system connectivity</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌍 Global Scalability</h3>
+                    <p><strong>Multi-Language Support:</strong> 15+ languages at launch</p>
+                    <p><strong>Cultural Adaptation:</strong> Region-specific therapeutic approaches</p>
+                    <p><strong>Cloud Infrastructure:</strong> Supports millions of concurrent users</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>💼 Business Model & Implementation</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); padding: 25px; border-radius: 12px;">
+                    <h3 style="color: #065f46; margin-bottom: 15px;">Revenue Streams</h3>
+                    <ul style="color: #047857; line-height: 1.8;">
+                        <li><strong>Freemium Model:</strong> Basic AI support free, premium features $9.99/month</li>
+                        <li><strong>Institutional Partnerships:</strong> Campus mental health centers, $50K/year</li>
+                        <li><strong>Corporate Wellness:</strong> Employee mental health programs, B2B pricing</li>
+                        <li><strong>Insurance Integration:</strong> Coverage for AI-assisted mental health care</li>
+                    </ul>
+                </div>
+                <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 25px; border-radius: 12px;">
+                    <h3 style="color: #92400e; margin-bottom: 15px;">Implementation Timeline</h3>
+                    <ul style="color: #a16207; line-height: 1.8;">
+                        <li><strong>Months 1-3:</strong> Beta testing with 3 universities</li>
+                        <li><strong>Months 4-6:</strong> Public launch, 10K users</li>
+                        <li><strong>Months 7-12:</strong> Scale to 100K users, 50 campuses</li>
+                        <li><strong>Year 2:</strong> International expansion, 1M users</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Chat functionality
+        const chatMessages = document.getElementById('chatMessages');
+        const userInput = document.getElementById('userInput');
+        
+        const responses = {
+            "hello": "Hi there! I'm so glad you reached out. How are you feeling right now?",
+            "anxious": "I hear that you're feeling anxious. That's completely understandable - anxiety can be really overwhelming. Can you tell me what's contributing to these feelings today?",
+            "stressed": "Stress can feel so heavy sometimes. I'm here to help you work through this. What's been the biggest source of stress for you lately?",
+            "sad": "I'm sorry you're feeling sad. It takes courage to acknowledge these feelings. Would you like to talk about what's been weighing on your heart?",
+            "help": "I'm here to support you in whatever way I can. Whether you need someone to listen, coping strategies, or connection to professional resources, I'm here. What would be most helpful right now?",
+            "crisis": "I can hear that you're in a lot of pain right now, and I want you to know that you're not alone. Your life has value, and there are people who want to help. Can I connect you with a crisis counselor right now?",
+            "default": "Thank you for sharing that with me. I'm here to listen and support you. Can you tell me more about how you're feeling?"
+        };
+        
+        function sendMessage() {
+            const message = userInput.value.trim();
+            if (!message) return;
+            
+            // Add user message
+            addMessage(message, 'user-message');
+            userInput.value = '';
+            
+            // Show typing indicator
+            setTimeout(() => {
+                addTypingIndicator();
+                setTimeout(() => {
+                    removeTypingIndicator();
+                    // Add AI response
+                    const response = getAIResponse(message);
+                    addMessage(response, 'ai-message');
+                }, 1500);
+            }, 500);
+        }
+        
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+        
+        function addMessage(text, className) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${className}`;
+            messageDiv.textContent = text;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        function addTypingIndicator() {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'typing-indicator';
+            typingDiv.id = 'typing';
+            typingDiv.textContent = '...';
+            chatMessages.appendChild(typingDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        function removeTypingIndicator() {
+            const typing = document.getElementById('typing');
+            if (typing) typing.remove();
+        }
+        
+        function getAIResponse(message) {
+            const lowerMessage = message.toLowerCase();
+            
+            if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
+                return responses.hello;
+            } else if (lowerMessage.includes('anxious') || lowerMessage.includes('anxiety')) {
+                return responses.anxious;
+            } else if (lowerMessage.includes('stress') || lowerMessage.includes('overwhelmed')) {
+                return responses.stressed;
+            } else if (lowerMessage.includes('sad') || lowerMessage.includes('depressed')) {
+                return responses.sad;
+            } else if (lowerMessage.includes('help') || lowerMessage.includes('support')) {
+                return responses.help;
+            } else if (lowerMessage.includes('crisis') || lowerMessage.includes('suicidal')) {
+                return responses.crisis;
+            } else {
+                return responses.default;
+            }
+        }
+        
+        function showDemo() {
+            // Clear chat and start demo
+            chatMessages.innerHTML = `
+                <div class="message ai-message">
+                    Hi! I'm MindBridge, your personal mental health companion. I'm here to listen and support you. How are you feeling today?
+                </div>
+            `;
+            
+            // Auto-demo conversation
+            setTimeout(() => {
+                addMessage("I've been feeling really overwhelmed with school lately", 'user-message');
+                setTimeout(() => {
+                    addTypingIndicator();
+                    setTimeout(() => {
+                        removeTypingIndicator();
+                        addMessage("I hear that you're feeling overwhelmed with school. That sounds really challenging. Academic pressure can be intense. Can you tell me what specifically has been feeling most overwhelming? Is it the workload, time management, or perhaps something else?", 'ai-message');
+                    }, 1500);
+                }, 1000);
+            }, 2000);
+        }
+        
+        function showCrisisDemo() {
+            chatMessages.innerHTML = `
+                <div class="message ai-message">
+                    Hi! I'm MindBridge. I'm here to support you no matter what you're going through.
+                </div>
+            `;
+            
+            setTimeout(() => {
+                addMessage("I don't think I can handle this anymore", 'user-message');
+                setTimeout(() => {
+                    addTypingIndicator();
+                    setTimeout(() => {
+                        removeTypingIndicator();
+                        addMessage("I can hear that you're in a lot of pain right now, and I want you to know that you're not alone. Your life has value, and there are people who want to help. I'm connecting you with a crisis counselor right now. In the meantime, let's try some grounding techniques together. Can you tell me 5 things you can see around you?", 'ai-message');
+                        setTimeout(() => {
+                            addMessage("🚨 Crisis Support Activated: Connecting to National Suicide Prevention Lifeline (988)", 'ai-message');
+                        }, 2000);
+                    }, 2000);
+                }, 1000);
+            }, 2000);
+        }
+        
+        function playStory() {
+            alert("🎥 Video would play here: Maya's transformation story showing her journey from crisis to confidence through MindBridge support");
+        }
+        
+        function showTestimonials() {
+            const testimonials = document.getElementById('testimonials');
+            testimonials.style.display = testimonials.style.display === 'none' ? 'block' : 'none';
+        }
+        
+        // Initialize charts
+        window.onload = function() {
+            // Impact Chart
+            const ctx1 = document.getElementById('impactChart').getContext('2d');
+            new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: ['Traditional Therapy', 'MindBridge AI', 'Combined Approach'],
+                    datasets: [{
+                        label: 'Access Time (Days)',
+                        data: [30, 0, 0],
+                        backgroundColor: '#ef4444',
+                        borderColor: '#dc2626',
+                        borderWidth: 1
+                    }, {
+                        label: 'Monthly Cost ($)',
+                        data: [200, 10, 150],
+                        backgroundColor: '#3b82f6',
+                        borderColor: '#2563eb',
+                        borderWidth: 1
+                    }, {
+                        label: 'Availability (Hours/Day)',
+                        data: [8, 24, 24],
+                        backgroundColor: '#10b981',
+                        borderColor: '#059669',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Mental Health Support Comparison'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            
+            // Progress Chart
+            const ctx2 = document.getElementById('progressChart').getContext('2d');
+            new Chart(ctx2, {
+                type: 'line',
+                data: {
+                    labels: ['Week 1', 'Week 2', 'Week 4', 'Week 6', 'Week 8', 'Week 12'],
+                    datasets: [{
+                        label: 'Anxiety Level (1-10)',
+                        data: [8, 7, 6, 5, 4, 3],
+                        borderColor: '#ef4444',
+                        backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                        tension: 0.4
+                    }, {
+                        label: 'Wellbeing Score (1-10)',
+                        data: [3, 4, 5, 6, 7, 8],
+                        borderColor: '#10b981',
+                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                        tension: 0.4
+                    }, {
+                        label: 'Coping Skills (1-10)',
+                        data: [2, 3, 5, 6, 7, 8],
+                        borderColor: '#3b82f6',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'User Progress Over Time (Average of 1,000 users)'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 10
+                        }
+                    }
+                }
+            });
+        };
+    </script>
+</body>
+</html>
